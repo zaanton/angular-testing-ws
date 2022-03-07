@@ -1,0 +1,24 @@
+<app-shopping-list-filter></app-shopping-list-filter>
+<div class="alert alert-info" *ngIf="(shoppingList$ | async)?.length === 0">
+  <p>
+    It looks like you don't have anything your list!
+    <a class="btn btn-primary" [routerLink]="['..', 'entry']">Add One</a>
+  </p>
+</div>
+<ul class="list-unstyled" *ngIf="shoppingList$ | async as shoppingList">
+  <li
+    class="alert"
+    [ngClass]="{
+      'alert-info': !item.purchased,
+      'alert-success': item.purchased
+    }"
+    *ngFor="let item of shoppingList"
+  >
+    <p [ngClass]="{ purchased: item.purchased }">{{ item.description }}</p>
+    <div *ngIf="!item.purchased">
+      <button (click)="markPurchased(item)" class="btn btn-danger btn-sm">
+        X
+      </button>
+    </div>
+  </li>
+</ul>

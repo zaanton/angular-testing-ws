@@ -1,0 +1,36 @@
+<div class="alert alert-info" *ngIf="(featureLoaded$ | async) === false">
+  <h3>The data is still loading. Stand by.</h3>
+</div>
+<div class="row" *ngIf="(featureLoaded$ | async) === true">
+  <nav class="col-3">
+    <ul class="nav nav-pills nav-fill flex-column">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['overview']"
+          [routerLinkActive]="['active']"
+          >Overview</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['list']"
+          [routerLinkActive]="['active']"
+          >Your List</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['entry']"
+          [routerLinkActive]="['active']"
+          >Add An Item</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <section class="col">
+    <router-outlet></router-outlet>
+  </section>
+</div>

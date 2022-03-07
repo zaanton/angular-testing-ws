@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="addItem(foci)">
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      #foci
+      autofocus
+      class="form-control"
+      type="text"
+      id="description"
+      formControlName="description"
+    />
+  </div>
+  <div
+    class="alert alert-danger"
+    *ngIf="description?.errors && (description?.dirty || description?.touched)"
+  >
+    <p *ngIf="description?.hasError('required')">We need a description</p>
+    <p *ngIf="description?.hasError('minlength')">
+      At Least Three Letters, Please!
+    </p>
+    <p *ngIf="description?.hasError('maxlength')">Wayyy too long!</p>
+  </div>
+  <button type="submit" class="btn btn-primary">Add This to your List</button>
+</form>

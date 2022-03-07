@@ -1,0 +1,26 @@
+<div class="btn-group" role="group" aria-label="filter displayed items">
+  <button
+    [disabled]="(sortingBy$ | async) === 'all'"
+    (click)="setSortBy('all')"
+    type="button"
+    class="btn btn-primary"
+  >
+    Show All
+  </button>
+  <button
+    [disabled]="(sortingBy$ | async) === 'unpurchased'"
+    (click)="setSortBy('unpurchased')"
+    type="button"
+    class="btn btn-primary"
+  >
+    Show Unpurchased Items Only
+  </button>
+  <button
+    [disabled]="(sortingBy$ | async) === 'purchased'"
+    (click)="setSortBy('purchased')"
+    type="button"
+    class="btn btn-primary"
+  >
+    Show Purchased Items Only
+  </button>
+</div>

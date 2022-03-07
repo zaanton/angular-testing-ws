@@ -1,0 +1,11 @@
+<header>
+  <h4>Counter Preferences</h4>
+</header>
+<section>
+  <h5>Set your Count By</h5>
+  <div class="btn-group" role="group" aria-label="count by selection">
+    <button [disabled]="(countingBy$ | async) ===1" (click)="setCountBy(1)" type="button" class="btn btn-primary">1</button>
+    <button [disabled]="(countingBy$ | async) ===3" (click)="setCountBy(3)" type="button" class="btn btn-primary">3</button>
+    <button [disabled]="(countingBy$ | async) ===5" (click)="setCountBy(5)" type="button" class="btn btn-primary">5</button>
+  </div>
+</section>

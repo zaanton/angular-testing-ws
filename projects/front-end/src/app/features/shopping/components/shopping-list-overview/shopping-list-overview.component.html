@@ -1,0 +1,8 @@
+<div class="card" *ngIf="model$ | async as model">
+  <div class="card-header">Your Shopping List</div>
+  <div class="card-body">
+    <p>You have {{ model.totalItems }} things on your shopping list.</p>
+    <p>{{ model.purchasedItems }} of those things are purchased.</p>
+    <p>{{ model.unpurchasedItems }} are not yet purchased</p>
+  </div>
+</div>

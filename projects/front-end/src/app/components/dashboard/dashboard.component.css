@@ -1,0 +1,8 @@
+pre {
+  background-color: rgb(48, 47, 47);
+  color: greenyellow;
+  margin: 0rem;
+  padding: 1.3rem;
+  border: 0.5px solid greenyellow;
+  border-left: 8px solid green;
+}
