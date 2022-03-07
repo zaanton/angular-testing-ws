@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Cypress Stuff
+cypress/videos
+cypress/screenshots
+
 # Compiled output
 /dist
 /tmp

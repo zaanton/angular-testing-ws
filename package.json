@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +41,7 @@
     "@angular/cli": "~13.2.5",
     "@angular/compiler-cli": "~13.2.0",
     "@briebug/jest-schematic": "^4.0.0",
+    "@cypress/schematic": "^1.6.0",
     "@types/jest": "latest",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.11.0",
@@ -46,6 +50,7 @@
     "eslint-plugin-ngrx": "^2.0.4",
     "jest": "latest",
     "ng-packagr": "^13.0.0",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "cypress": "latest"
   }
 }
